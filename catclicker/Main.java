@@ -5,14 +5,13 @@ package catclicker;
  */
 public class Main {
 
-
     public Main(){
         createGUI();
     }
     
     private void createGUI(){
         MyFrame v = new MyFrame("");
-        v.setContentPane(new Panel());
+        v.setContentPane(new MainPanel());
         v.setVisible(true);
     }
     

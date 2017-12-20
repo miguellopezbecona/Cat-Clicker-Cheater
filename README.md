@@ -1,9 +1,10 @@
 ## What is this repository about?
 
-This is a stupid Java app that I used to "cheat" Cat Clicker MLG flash game. It is in a **very early alpha stage**, so **don't expect this to run safely**!
+This is a Java app that I used to "cheat" in Cat Clicker MLG flash game. The mentioned game is similar to Cookie Clicker. Anyway, it consists in collecting items (in this case, coins and gems) by clicking a cat a lot of times. When you have a lot of coins, you can purchase some elements (one of them is John Cena, lmao) that give you coins in an automatic way, so you earn more coins in each second the more you have of these stuff. You can also buy upgrades too.
 
-The mentioned game is simillat to Cookie Clicker. Anyway, it consists of collecting items (in this case, coins and gems) by clicking a cat a lot of times. When you have a lot of coins, you can purchase some elements (one is John Cena, lol) that give you coins in a automatic way, so you earn more coins in each second the more you have of these staff. You can also buy upgrades too.
-Anyway, this game is somewhat addictive, and it becomes annoying when you have to wait lots of time to get lots of stuff, so I though a way to automatize it. The first thing I discovered is that, while you are offline and then reload the game, you gain the 10% of the earnings you would have won if you were online that time. The game does that comparing the date of your device when you saved and your current date. So, setting 2099 as your year date when reloading the game is a easy way to gain lots of coins. However, you have to do it a lot of times when advanced in the game, and it becomes annoying.
+This game can become somewhat addictive, and it becomes annoying when you have to wait lots of time to get lots of stuff, so I though6 a way to try to automatize it. The first thing I discovered is that, while you are offline and then you reload the game, you gain the 10% of the earnings you would have won if you were online that time. The game does that comparing the date of your device when you saved and your current date. So, setting 2099 as your year date when reloading the game is a easy way to gain lots of coins/gems. However, you have to do it a lot of times when advanced in the game, and it becomes more boring.
+
+Automatic clicks are done having into account where your "Reload" browser button and the flash frame are. However, the app isn't magic and you have to specify these locations by selecting two rectangles in your screen (you confirm then with a ugly lower button, or just pressing Enter). Still, it works decently fine, or at least, much much better than the very early version from a couple of years ago. You also specify the number of iterations it takes, so you don't get stuck eternally. I suggest you trying setting the two rectangles with a couple of iterations, and then setting a higher number if things went okay (that implies you leaving the PC alone for a while :) )
 
 The main flow of the app is the following:
 
@@ -16,12 +17,9 @@ The main flow of the app is the following:
 	* Reloading the game
 * Toggles year date to 1980 or 2079
 
-When you init the app, it gets your current date so it changes it back to the original one when you exit the application.
+When you init the app, it gets your current date so it changes it back to the original one when it finishes the number of iterations you specified. Strange temporal things might happen to you computer because of those date changes, sorry.
 
-## Which problems does it present?
-Clicks simulation are done with raw x/y positions. This means that its correct behaviour relies heavily on how the flash game is distributed in your monitor. In the next image I will show you my distribution if you want to emulate it. I have a 1366x768 resolution, with the game maximized in a Firefox window, with menu bar included:
-![Distribution](https://raw.githubusercontent.com/miguellopezbecona/Cat-Clicker-Cheater/master/distribution.png)
-
-## I executed it and I can't close it!
-Oh no... Well, if you have the app focused in, try with Alt+E (shortcut for the "Exit" button). If you can't close it by doing Alt+F4s, you may have to hard-turn off your computer, sorry, the app is very bad by now.
-I suggest you playing with the source code before executing it.
+## Possible future work
+* Dates are changed using a Windows command. It would  be interesting to detect the OS automatically and implement the date change in the Linux equivalent way, to be more versatile.
+* Maybe loading/saving your selected rectangles so you don't have to specify then every time you run the application.
+* Add some magic so it detects the desired rectangles automatically (feasible?)

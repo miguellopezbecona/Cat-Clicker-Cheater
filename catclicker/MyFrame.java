@@ -1,8 +1,10 @@
 package catclicker;
 
+import java.awt.*;
+
 /**
  *
- * @author Miguel López
+ * @author Miguel
  */
 public class MyFrame extends javax.swing.JFrame {
     
@@ -10,6 +12,10 @@ public class MyFrame extends javax.swing.JFrame {
         super(title);
         initComponents();
         setResizable(false);
+        
+        // Posiciona la Ventana adecuadamente la pantalla
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        setLocation(0, ( (int) screenSize.getHeight() - 250 )/2);
     }
 
     /** This method is called from within the constructor to
@@ -27,11 +33,11 @@ public class MyFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 91, Short.MAX_VALUE)
+            .addGap(0, 200, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 200, Short.MAX_VALUE)
         );
 
         pack();
